@@ -1,0 +1,111 @@
+/* DashboardPage.css */
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.dashboard-container {
+    display: flex;
+    height: 100vh;
+}
+
+.navigation {
+    width: 200px; /* Fixed width for navigation */
+    background-color: #2c3e50; /* Dark background */
+    color: white; /* White text */
+    display: flex;
+    flex-direction: column;
+    padding: 10px; /* Padding around navigation */
+    position: fixed; /* Keep navigation fixed */
+    height: 100%; /* Full height */
+}
+
+.navigation-menu {
+    flex-grow: 1; /* Allow the menu to take available space */
+}
+
+.navigation-list {
+    list-style-type: none; /* Remove bullet points */
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+}
+
+.navigation-item {
+    background-color: #34495e; /* Slightly lighter background for items */
+    margin: 10px 0; /* Margin between items */
+    padding: 15px; /* Padding for the items */
+    border: 2px solid transparent; /* Transparent border for hover effect */
+    border-radius: 5px; /* Rounded corners for the boxes */
+    text-align: center; /* Center the text */
+    transition: border-color 0.3s; /* Smooth transition for hover effect */
+    cursor: pointer; /* Change cursor to pointer */
+    width: 100%; /* Make button fill the width */
+    font-size: 16px; /* Set a base font size */
+}
+
+.navigation-item:hover {
+    border-color: #3498db; /* Change border color on hover */
+    outline: none; /* Remove outline */
+}
+
+.dashboard-content {
+    flex-grow: 1; /* Take remaining space */
+    padding: 20px;
+    margin-left: 220px; /* Leave space for the fixed navigation */
+    background-color: #ecf0f1; /* Light background */
+    overflow-y: auto; /* Allow scrolling */
+    height: 100vh; /* Set height to full viewport */
+}
+
+.dashboard-header {
+    background-color: #3498db; /* Header background color */
+    color: white; /* Header text color */
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.dashboard-title {
+    margin: 0;
+    font-size: 24px;
+    text-align: center;
+}
+
+.dashboard-main {
+    margin-top: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navigation {
+        width: 200px; /* Keep the width same */
+    }
+
+    .dashboard-content {
+        margin-left: 220px; /* Maintain margin for content */
+        padding: 10px; /* Reduced padding */
+    }
+
+    .dashboard-title {
+        font-size: 20px; /* Smaller title on small screens */
+    }
+
+    .navigation-item {
+        font-size: 14px; /* Smaller font size for mobile */
+        padding: 10px; /* Reduced padding for mobile */
+        margin: 5px 0; /* Reduced margin for mobile */
+    }
+}
+
+.welcome-container {
+    text-align: center;
+}
+
+.welcome-title {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.welcome-message {
+    font-size: 16px;
+}

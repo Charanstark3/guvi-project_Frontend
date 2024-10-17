@@ -1,0 +1,64 @@
+/* Navigation.css */
+
+.navigation {
+    background-color: #2c3e50; /* Dark background color */
+    padding: 20px;
+    width: 250px; /* Fixed width for sidebar */
+    position: fixed; /* Fixed positioning for sidebar */
+    height: 100%; /* Full height of the viewport */
+    display: flex;
+    flex-direction: column;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    z-index: 1000; /* Ensure it's above other elements */
+}
+
+.navigation-menu {
+    flex: 1; /* Allow the menu to grow */
+}
+
+.navigation-list {
+    list-style-type: none; /* Remove default list styling */
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+}
+
+.navigation-item {
+    display: block; /* Display as block for better click area */
+    color: white; /* White text color */
+    padding: 15px 20px; /* Padding for the buttons */
+    text-align: left; /* Align text to the left */
+    text-decoration: none; /* Remove underline */
+    border: none; /* Remove button border */
+    background: transparent; /* Transparent background */
+    cursor: pointer; /* Change cursor on hover */
+    transition: background 0.3s ease; /* Smooth background transition */
+}
+
+.navigation-item:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* Slightly lighter on hover */
+}
+
+.logout {
+    background-color: #e74c3c; /* Red background for logout */
+    color: white; /* White text for logout */
+}
+
+.logout:hover {
+    background-color: #c0392b; /* Darker red on hover */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .navigation {
+        width: 200px; /* Reduced width for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .navigation {
+        width: 100%; /* Full width for very small screens */
+        height: auto; /* Auto height for smaller screens */
+        position: relative; /* Relative positioning */
+        box-shadow: none; /* Remove shadow */
+    }
+}
